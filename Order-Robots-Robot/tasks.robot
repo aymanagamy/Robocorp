@@ -71,7 +71,7 @@ Fill an Order
     Click Element    id:id-body-${row}[Body]    action_chain=True    
     Input Text    //*[@placeholder="Enter the part number for the legs"]    ${row}[Legs]
     Input Text    id:address    ${row}[Address]
-    Sleep    500ms
+    Sleep    500ms        # Adding 500ms as a safe margin for 'Legs' field because it is missing occasionally
 
 *** Keywords ***
 Preview the Order
