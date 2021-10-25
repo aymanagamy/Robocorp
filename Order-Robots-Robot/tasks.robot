@@ -19,8 +19,8 @@ Order Robots from RobotSpareBin Industries Inc
 
 *** Keywords ***
 Open the Robot Order Website
-    ${secret}    Get Secret    RobotSpareBin
-    # Open Available Browser    https://robotsparebinindustries.com/#/robot-order
+    # ${secret}    Get Secret    RobotSpareBin
+    Open Available Browser    https://robotsparebinindustries.com/#/robot-order
     Open Available Browser    ${secret}[url]
     Wait Until Page Contains Element    id:order
 
