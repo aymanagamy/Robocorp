@@ -19,9 +19,14 @@ Order Robots from RobotSpareBin Industries Inc
 
 *** Keywords ***
 Open the Robot Order Website
-    # ${secret}    Get Secret    RobotSpareBin
+
+    # 1. URL hardcoded     
     Open Available Browser    https://robotsparebinindustries.com/#/robot-order
-    Open Available Browser    ${secret}[url]
+    
+    # 2. Get URL through Vault
+    # ${secret}    Get Secret    RobotSpareBin
+    # Open Available Browser    ${secret}[url]
+
     Wait Until Page Contains Element    id:order
 
 *** Keywords ***
