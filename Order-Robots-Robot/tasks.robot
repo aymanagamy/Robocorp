@@ -21,11 +21,11 @@ Order Robots from RobotSpareBin Industries Inc
 Open the Robot Order Website
 
     # 1. URL hardcoded     
-    Open Available Browser    https://robotsparebinindustries.com/#/robot-order
+    # Open Available Browser    https://robotsparebinindustries.com/#/robot-order
     
     # 2. Get URL through Vault
-    # ${secret}    Get Secret    RobotSpareBin
-    # Open Available Browser    ${secret}[url]
+    ${secret}    Get Secret    RobotSpareBin
+    Open Available Browser    ${secret}[url]
 
     Wait Until Page Contains Element    id:order
 
@@ -138,5 +138,5 @@ Order Robots from RobotSpareBin Industries Inc
     Create a ZIP archive for all PDF Receipts
 
 Close and Log Completed
-    # [Teardown]    Logout
+    [Teardown]    Logout
     Log  Done.
